@@ -6,7 +6,7 @@ import Navbar from '../../components/ui/NavbarEss'
 import Footer from '../../components/ui/Footer'
 import styles from './../../components/styles/essaie.module.css'
 
-const MAX_ATTEMPTS = 5
+const MAX_ATTEMPTS = 3
 const STORAGE_KEY = 'promptLimit'
 const USER_KEY = 'userKey'
 const CONVERSATION_ID_KEY = 'conversationId'

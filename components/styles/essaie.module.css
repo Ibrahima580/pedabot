@@ -1,0 +1,271 @@
+/* ---------- Layout ---------- */
+.main {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 6rem auto 2rem;
+  padding: 0 1rem;
+  width: 100%;
+  flex: 1;
+}
+
+/* ---------- Chat Box ---------- */
+.chatBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+  width: 100%;
+  padding-right: 4px;
+}
+
+/* ---------- Messages ---------- */
+.message {
+  background: #f1f1f1;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  word-wrap: break-word;
+  margin-bottom: 0.5rem;
+}
+
+.etudiantPair {
+  background-color: #d0eaff;
+}
+
+.etudiantImpair {
+  background-color: #a3d1ff;
+}
+
+.role {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  color: #333;
+}
+
+/* ---------- Formulaire ---------- */
+.form {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  background: white;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.textarea {
+  flex: 1;
+  resize: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  min-height: 40px;
+  max-height: 150px;
+  overflow-y: auto;
+  font-family: inherit;
+  width: 100%;
+}
+
+.sendButton {
+  background: #0070f3;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.sendButton:hover {
+  background: #0059c1;
+}
+
+/* ---------- Popup ---------- */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.popup h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.popup p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.popupButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.popupButtonPrimary,
+.popupButtonSecondary {
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.popupButtonPrimary {
+  background-color: #0070f3;
+  color: white;
+}
+
+.popupButtonPrimary:hover {
+  background-color: #0059c1;
+}
+
+.popupButtonSecondary {
+  background-color: #eee;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.popupButtonSecondary:hover {
+  background-color: #ddd;
+}
+
+/* ---------- Markdown Styling ---------- */
+.markdownContent {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #222;
+  word-wrap: break-word;
+}
+
+.markdownContent h1 {
+  font-size: 1.8rem;
+  margin: 1rem 0 0.5rem;
+  font-weight: 700;
+}
+
+.markdownContent h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+}
+
+.markdownContent p {
+  margin: 0.5rem 0;
+}
+
+.markdownContent ul,
+.markdownContent ol {
+  margin: 0.5rem 0 0.5rem 1.5rem;
+}
+
+.markdownContent li {
+  margin: 0.25rem 0;
+}
+
+.markdownContent a {
+  color: #1a73e8;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.markdownContent a:hover {
+  text-decoration: none;
+}
+
+.markdownContent strong {
+  font-weight: 600;
+}
+
+.markdownContent em {
+  font-style: italic;
+}
+
+.markdownContent code {
+  background-color: #f4f4f4;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+}
+
+.markdownContent pre {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 4rem;
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  .form {
+    flex-direction: row;
+  }
+
+  .textarea {
+    font-size: 1rem;
+  }
+
+  .sendButton {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sendButton {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .textarea {
+    font-size: 0.95rem;
+  }
+}

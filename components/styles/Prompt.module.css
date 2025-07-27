@@ -1,0 +1,109 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;   /* élargi de 600px à 800px */
+  margin: 6rem auto 2rem;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.chatBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 200px); 
+  width: 100%;
+  padding-right: 4px; 
+}
+
+
+.message {
+  background: #f1f1f1;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  word-wrap: break-word;
+}
+
+.role {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  background: white;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  padding-bottom: 1rem;
+  width: 100%;       /* pour que le formulaire prenne toute la largeur dispo */
+}
+
+.textarea {
+  flex: 1;
+  resize: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  min-height: 40px;
+  max-height: 150px;
+  overflow-y: auto;
+  font-family: inherit;
+  width: 100%;
+}
+
+.sendButton {
+  background: #0070f3;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.sendButton:hover {
+  background: #0059c1;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 4rem;
+    padding: 0 1rem;
+    max-width: 100%;  /* prend toute la largeur sur petit écran */
+  }
+
+  .form {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .textarea {
+    font-size: 1rem;
+  }
+
+  .sendButton {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sendButton {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .textarea {
+    font-size: 0.95rem;
+  }
+}
